@@ -15,8 +15,8 @@ In our project environment we have been using a plugin net.xeric.maven:h2-maven-
 when we went to upgrade our H2 version it didn't occur to us that if we didn't update the version of H2 being used by the plugin then we
 would be committing the mismatched version error.
 
-It occurred to me that it ought to be possible to reconfigure the plugin to use a different version of the H2 jar in the active Maven pom
-without making any changes to the plugin. (see plugin specification below)
+So we realized that we had caused the H2 problem in our own environment. It occurred to me that it ought to be possible to reconfigure the plugin to use a
+different version of the H2 jar in the active Maven pom without making any changes to the plugin. (see plugin specification below)
 
 This repo works out some of the details of our experiments around this
 
