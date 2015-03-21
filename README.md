@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/andyglick/h2-jdbc-escape-processing.png)](https://travis-ci.org/andyglick/h2-jdbc-escape-processing)
+
 H2 JDBC Escape Processing
 =========================
 
