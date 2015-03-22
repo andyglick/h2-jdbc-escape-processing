@@ -23,13 +23,13 @@ different version of the H2 jar in the active Maven pom without making any chang
 This repo works out some of the details of our experiments around this
 
 There are 6 test classes, there is one each for { D '2015-03-21' }, { T '12:12:12.12' }, { TS '2015-03-21 12:12:12.12' },
-and there is a test that runs in the Maven test phase whose Java classname ends with "*Test" and another which runs in the
-Maven integration-test phase whose Java classname ends with "*IT"
+and there is a test that runs in the Maven test phase whose Java classname ends with "*Test.java" and another which runs in the
+Maven integration-test phase whose Java classname ends with "*IT.java"
 
-In the case of the test classes whose name ends with "*Test" using the JUnit @BeforeClass and @AfterClass annotations a class level
+In the case of the test classes whose name ends with "*Test.java" using the JUnit @BeforeClass and @AfterClass annotations a class level
 startup and shutdown method run and then stop the database server which runs in the JUnit test class as the test that is
 
-The tests whose class names end with "*IT" depend upon the Maven pre-integration-test phase to start an H2 server running, the server is
+The tests whose class names end with "*IT.java" depend upon the Maven pre-integration-test phase to start an H2 server running, the server is
 shutdown in the post-integration-test-phase.
 
 In all test classes a connection is made to the server database before the test methods run which configures a named database in the server context.
