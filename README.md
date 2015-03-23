@@ -17,6 +17,18 @@ In our project environment we have been using a plugin net.xeric.maven:h2-maven-
 when we went to upgrade our H2 version it didn't occur to us that if we didn't update the version of H2 being used by the plugin then we
 would be committing the mismatched version error.
 
+The plugin will be accessible if you add the following to your pom:
+
+      <pluginRepositories>
+        <pluginRepository>
+          <id>sonatype-nexus-snapshots</id>
+          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+
 So we realized that we had caused the H2 problem in our own environment. It occurred to me that it ought to be possible to reconfigure the plugin to use a
 different version of the H2 jar in the active Maven pom without making any changes to the plugin. (see plugin specification below)
 
